@@ -1,0 +1,39 @@
+
+
+{% load static %} 
+<link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Zero Enterprises</title>
+
+  <style>
+    @media (max-width: 500px){
+      .one{
+        display: block !important;
+      }
+    }
+
+    .two{
+      flex-grow:  0 !important;
+    }
+  </style>
+</head>
+<body>
+
+  
+</body>
+</html>
+
+{% include 'app/head.html' %}
+
+{% include 'app/first.html' %}
+
+{% include 'app/second.html' %}
+
+{% include 'app/third.html' %}
+
+{% include 'app/footer.html' %}

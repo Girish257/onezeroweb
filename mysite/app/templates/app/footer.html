@@ -1,0 +1,283 @@
+
+{% load static %} 
+<link rel="stylesheet" href="{% static '/css/main.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<style>
+  *{
+    box-sizing: border-box;
+    
+    
+}
+* {
+  font-family: 'Afacad', sans-serif;
+}
+
+#buttontag{
+  padding: 10px 15px;
+  background: none;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #5c5c5c;
+  background-color: #344955;
+}
+#buttontag:hover{
+  background-color: #4A6572;
+  color: #fff;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1030px) {
+  .test{
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+
+}
+.top1{
+  padding-left: 0px !important;
+}
+}
+
+@media (max-width: 500px){
+    .about{
+      display: block !important;
+    }
+    /* .serve{
+      width: 100%;
+    } */
+    .brandlogo{
+      margin: 5px !important;
+    }
+    .one{
+      display: block !important;
+      width: 115%;
+    }
+    .slider{
+      margin-left: 0rem !important;
+      align-items: center !important;
+    }
+    .slideimg{
+      margin-left: 0rem !important;
+      height: 14rem !important;
+      width: 19rem !important;
+    }
+    .imgcompany{
+      width: 11rem !important;
+      margin: 0 !important;
+      margin-top: 10px !important;
+    }
+    .brand{
+      font-size: large !important;
+    }
+    .top1{
+      padding-left: 0px !important;
+    }
+    .test{
+      width: 21rem !important;
+     display: grid !important;
+     grid-template-columns: repeat(1, 1fr) !important;
+     align-items: center !important;
+     padding-left: 5px !important;
+     padding-top: 19px !important;
+    }
+    .enquiry{
+      display: block !important;
+      /* margin-bottom: 5rem !important; */
+    }
+    .testing{
+      width: 20rem !important;
+    }
+    .industry{
+      width: 20rem !important;
+      display: grid !important; 
+      grid-template-columns: repeat(2, 1fr) !important; 
+    }
+    .box{
+      width: 9.5rem !important;
+      height: 20rem !important;
+    }
+    .box-img{
+      width: 8.5rem !important;
+    }
+    .box-ptag{
+      width: 9rem !important;
+    }
+    .ek{
+      padding-left: 0% !important;
+    }
+    .a{
+      width: 6rem;
+    }
+    .b{
+      width: 9rem !important;
+    }
+    .c{
+      width: 9rem;
+    }
+    .firstimg{
+      object-fit: cover;
+    }
+    .d{
+      height: 27rem !important;
+    }
+    .e{
+      height: 22rem !important;
+    }
+    .f{
+      height: 19rem !important;
+    }
+    .g{
+      margin-top: 12px !important;
+    }
+    .h{
+      padding-left: 5px !important;
+    }
+    .i{
+      height: 24rem !important;
+    }
+    .j{
+      height: 130px !important;
+      background-color: #344955 !important;
+    }
+    .k{
+      margin-top: 2rem !important;
+      width: 28rem;
+    }
+    .l{
+      margin-top: 5rem;
+    }
+    .m{
+      margin-left: 95px !important;
+    }
+    .n{
+      margin-left: 50px !important;
+    }
+    .imgswach{
+      height: 30% !important;
+      width: 70% !important;
+    }
+  }
+
+  .two {
+    flex-grow: 0 !important;
+    /* border-bottom-left-radius: 50%; */
+  }
+
+  .testing{
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 8rem;
+    height: 140px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .box{
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 8rem;
+    height: 140px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  .test{
+    background-color:  #f1e8e8; 
+    margin-left: 5%; 
+    margin-right: 5%;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    padding-top: 1.5%;
+    padding-left: 70px;
+  }
+
+  .industry{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .top{
+    color: white !important;
+    text-decoration: none;
+  }
+.product{
+  text-align: center;
+}
+  
+
+
+</style>
+
+<section class="j">
+  <div class="calltoAction" style="background-color: #344955; height: 70px; padding-top: 22px; margin-top: 2%;">
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <div>
+      <h4 class="top">Let's get in touch and explore business opportunities</h4>
+    </div>
+    <div class="k">
+      <a href="{% url 'contact' %}" class="transparentButton top" id="buttontag" style="background-color: #4A6572;">
+        Connect With Us
+        <svg width="24.812" height="7" viewBox="0 0 24.812 7">
+          <g data-name="Group 3" transform="translate(0 0.46)">
+            <path data-name="Path 2" d="M698.4,664.237h23.243l-5.89-5.89" transform="translate(-698.398 -658.347)" fill="none" stroke="#fff" stroke-width="1.3"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    </div>
+  </div>
+</section>
+<section>
+
+<footer class="footer-06" style="background-color: #4A6572 ; color: white;" >
+  <div class="container">
+  <div class="row align-items-center align-items-stretch mb-5">
+  
+  
+  </div>
+  <div class="row pt-4" >
+  <div class="col-md-3 col-lg-6 order-md-last">
+  <div class="row justify-content-end">
+  <div class="col-md-12 col-lg-9 text-md-right mb-md-0 mb-4">
+  <h1 class="footer-heading"><a href="#" class="logo top">One Zero Enterprises</a></h1>
+  <p class="top1" style="padding-left: 120px; color: rgb(186, 156, 119); font-size:15px; ">
+    Bringing Mineral At Their Finest
+  </p>
+  <p class="copyright">
+  Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
+  </p>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-9 col-lg-6">
+  <div class="row">
+  <div class="col-md-4 mb-md-0 mb-4">
+  <h2 class="footer-heading">Information</h2>
+  <ul class="list-unstyled">
+  <li><a href="/#our" class="py-1 d-block top"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Our Company</a></li>
+  <li><a href="{% url 'contact' %}" class="py-1 d-block top"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Contact Us</a></li>
+  <li><a href="{% url 'about' %}" class="py-1 d-block top"><span class="ion-ios-checkmark-circle-outline mr-2"></span>About Us</a></li>
+  </ul>
+  </div>
+  <div class="col-md-6 mb-md-0 mb-6" style="padding-left: 15%;">
+    
+      <img class="imgswach" src="{% static 'images/india1.jpg' %}" alt="My image" style="height: 40%; width: 90%; margin-bottom: 5%; border: none;"/>
+
+      <img class="imgswach" src="{% static 'images/make.png' %}" alt="My image" style="height: 40%; width: 90%; border:  none;"/>
+    
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
+
+</section>

@@ -1,0 +1,146 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Zero Enterprises</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="{% static '/css/main.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+{% include 'app/head.html' %}
+
+<div style="text-align: center; ">
+
+<img src="{% static 'images/contact.jpg' %}" alt="My image" style=" width: 80%; height: 50%;"/>
+
+
+<div style=" align-items: center; padding-left: 20px; padding-right: 20px;padding-top: 5px; ">
+  <hr>
+
+  <div class="enquiry" style="display: flex; justify-content: space-evenly; background-color: rgb(236, 240, 243); padding-top: 2%;">
+
+    <div style=" padding-left: 2%; padding-right: 2%;">
+      
+      <form method="POST">
+        {% csrf_token %}
+        <div class="form-row" >
+
+          <h2>Enquiry Form</h2>
+          <hr>
+          {% for message in messages %}
+          <div id="notice" class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+              {{ message }}
+          </div>
+          {% endfor %}
+
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          <script>
+              $(document).ready(function(){
+                  setTimeout(function(){
+                      $("#notice").alert('close');
+                  }, 3000);
+              });
+          </script>
+
+            <div class="form-group">
+                <label for="inputName" style="padding-right: 155px;">Name* :</label>
+                <input type="text" class="form-control" id="inputName" name="name" required >
+            </div>
+
+            <div class="form-group">
+              <label for="inputName" style="padding-right: 94px;">Company Name :</label>
+              <input type="text" class="form-control" id="inputName" name="companyname">
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail4" style="padding-right: 160px;">Email* :</label>
+            <input type="email" class="form-control" id="inputEmail4" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputcontact" style="padding-right: 95px;">Contact Number* : </label>
+            <input type="text" class="form-control" id="inputcontact" name="contactnum" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName" style="padding-right: 110px;">Product Name :</label>
+            <input type="text" class="form-control" id="inputName" name="productname">
+        </div>
+
+        <div class="form-group">
+          <label for="inputName" style="padding-right: 140px;">Message :</label>
+          <textarea type="text" class="form-control" id="inputName" name="message"></textarea>
+      </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+        <p></p>
+        <hr>
+        
+      </form>
+
+    </div>
+
+    <div style="padding-left: 2%; padding-right: 10%;">
+      
+      <div>
+        <h2 class="l">Contact Us</h2>
+        <hr>
+        <br>
+        <img src="{% static 'images/user.png' %}" alt="" style="height: 4rem;">
+        <br><br>
+        <h6>Mr. Piyush Choudhary</h6>
+        <hr>
+        <div class="m" style="display: flex; margin-left: 40px; ">
+        <img src="{% static 'images/whatsapp1.png' %}" alt="" style="height: 1.5rem;">
+        
+        <p style=" margin-left: 7px; text-decoration: none;"><a href="tel:{{ user.contact_number }}">+91 9799909725</a></p>
+      </div>
+      <div class="m" style="display: flex; margin-left: 40px;">
+        <img src="{% static 'images/phone.png' %}" alt="" style="height: 1.5rem;">
+        <p style=" margin-left: 7px; text-decoration: none;"><a href="tel:{{ user.contact_number }}">+91 7737909725</a></p>
+
+      </div>
+      <hr>
+
+        <div class="n" style="display: flex; ">
+          <img src="{% static 'images/mail.png' %}" alt="" style="height: 1.5rem;">
+        <p style="margin-left: 10px;"><a href="mailto:{{ user.email }}">onezeroenterprises@gmail.com</a></p>
+
+      </div>
+      <div class="n" style="display: flex; ">
+        <img src="{% static 'images/insta.png' %}" alt="" style="height: 1.5rem;"> InstaGram ID :
+      <p style="margin-left: 10px;">
+        <a href="https://www.instagram.com/{{ instagram_username }}?igsh=NWp3eGdjdHN2MGhp" target="_blank">
+            Onezeroenterprises
+        </a>
+        </p>
+
+    </div>
+      </div>
+    </div>
+  </div>
+
+   
+
+</div>
+
+</div>
+
+
+
+
+  
+</body>
+</html>
+
+
+
+{% include 'app/footer.html' %}
